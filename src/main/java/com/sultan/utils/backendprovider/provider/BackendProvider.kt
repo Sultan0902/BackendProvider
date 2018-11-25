@@ -244,7 +244,7 @@ open class BackendProvider<T>(private val context: Context, private val apiClass
                 .addConverterFactory(GsonConverterFactory.create(backendGson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
-        backendApi = retrofit.create(apiClass!!)
+        backendApi = retrofit.create(apiClass)
         return backendApi!!
     }
 
