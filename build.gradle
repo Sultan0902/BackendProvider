@@ -81,8 +81,8 @@ ext {
             'By default, it contains the Http Interceptor which has a JSON mapper. However user can add a ' +
             'custom interceptor to handle the response and mapp them accordingly as well.'
 
-    siteUrl = 'https://github.com/Sultan0902/stringutils'
-    gitUrl = 'https://github.com/Sultan0902/stringutils.git'
+    siteUrl = 'https://github.com/Sultan0902/BackendProvider'
+    gitUrl = 'https://github.com/Sultan0902/BackendProvider.git'
 
     libraryVersion = '1.0.0'
 
