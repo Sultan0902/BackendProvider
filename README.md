@@ -46,7 +46,7 @@ Default Responses handled with Backend Provider
 Backend Provider default interceptor can map API response on these two type of Response Model
 
 1. GeneralResponse
-------------------
+-------------------
 
 This type of reponse model only maps the Http Response `statusCode`, `message` and `success` boolean on the below `GeneralResponse` class.
 
@@ -63,7 +63,7 @@ class GeneralResponse constructor(
 ```
 
 2. DataResponse<T>
-------------------
+-------------------
 
 This type of generic reponse model maps the Http Response `statusCode`, `message`, `success` boolean as well as the `data` present in the backend API response on the below `DataResponse` class.
 
