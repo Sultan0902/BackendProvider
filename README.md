@@ -26,7 +26,7 @@ buildscript {
 ```
 
 Include Backend Provider using Maven
--------------------------------
+------------------------------------
 
 In a Maven project, one would include the runtime in the dependencies section
 of your `pom.xml` (replacing `${backendprovider.version}` with the appropriate current
@@ -40,8 +40,47 @@ release version):
   <type>pom</type>
 </dependency 
 ```
+Default Responses handled with Backend Provider
+-----------------------------------------------
 
+Backend Provider default interceptor can map API response on these two type of Response Model
 
+1. GeneralResponse
+------------------
+
+This type of reponse model only maps the Http Response `statusCode`, `message` and `success` boolean on the below `GeneralResponse` class.
+
+```xml
+class GeneralResponse constructor(
+        @SerializedName("code")
+        val code: Int = 400,
+        @SerializedName("message")
+        val message: String = "",
+        @SerializedName("isSuccess")
+        val isSuccess : Boolean = false){
+}
+
+```
+
+2. DataResponse<T>
+------------------
+
+This type of generic reponse model maps the Http Response `statusCode`, `message`, `success` boolean as well as the `data` present in the backend API response on the below `DataResponse` class.
+
+Datatype of `data` is generic, so user could define the type of data when he is using this response model.
+
+```xml
+class DataResponse<T> constructor(
+        @SerializedName("code")
+        val code: Int = 400,
+        @SerializedName("message")
+        val message: String = "",
+        @SerializedName("data")
+        val data: T? = null,
+        @SerializedName("isSuccess")
+        val isSuccess : Boolean = false){
+}
+```
 
 License
 -------
