@@ -103,7 +103,7 @@ You can also set the logging level of the retrofit class by passing the value of
 
 You can set the values for `backendConnectionTimeout`, `backendReadTimeout` and `backendWriteTimeout` using setter method. However, the default values of these Timeout is 30 seconds.
 
-You can also se the values of `internetError` and `backendConnectivityError` using setters. THe default value of `internetError` is `No internet connection` and default value of `backendConnectivityError` is `Unable to connect. Some error occured`. 
+You can also se the values of `internetError` and `backendConnectivityError` using setters. The default value of `internetError` is `No internet connection` and default value of `backendConnectivityError` is `Unable to connect. Some error occured`. 
 
 You can provide your own custom values for these variables.
 
